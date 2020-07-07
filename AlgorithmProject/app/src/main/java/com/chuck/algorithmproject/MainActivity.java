@@ -4,7 +4,7 @@ package com.chuck.algorithmproject;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.chuck.algorithmproject.sort.RadixSort;
+import com.chuck.algorithmproject.binarytree.BinaryTree;
 
 public class MainActivity extends Activity {
 
@@ -21,6 +21,7 @@ public class MainActivity extends Activity {
 //        HeapSort.heapSort();
 //        CountSort.countSort();
 //        BucketSort.bucketSort();
-        RadixSort.radixSort();
+//        RadixSort.radixSort();
+        BinaryTree.start();
     }
 }
