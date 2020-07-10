@@ -122,4 +122,39 @@ public class BinaryTree {
             }
         }
     }
+
+	public static void backScanWithStack(){
+		if(binaryTreeBase == null){
+			binaryTreeBase = buildBinaryTree(binaryTreeBase, 0);
+		}
+		Stack<BinaryTreeBase> stack = new Stack<BinaryTreeBase>();
+        BinaryTreeBase tempBinaryTree = binaryTreeBase;
+        stack.push(tempBinaryTree);
+		
+		BinaryTreeBase lastVisitBinaryTree = null;
+		
+		while(tempBinaryTree != null){
+			if(tempBinaryTree.lChild != null){
+				System.out.println("backScanWithStack left number is:" + tempBinaryTree.lChild.value);
+				stack.push(tempBinaryTree.lChild);
+			}
+			tempBinaryTree = tempBinaryTree.lChild;
+		}
+
+		while(!stack.isEmpty()){
+			tempBinaryTree = stack.pop();
+			BinaryTreeBase rightChild = tempBinaryTree.rChild;
+			if(rightChild != null && rightChild != lastVisitBinaryTree){
+				stack.push(tempBinaryTree);
+				tempBinaryTree = rightChild;
+				while(tempBinaryTree != null){
+					stack.push(tempBinaryTree);
+					tempBinaryTree = tempBinaryTree.lChild;
+				}
+			} else {
+				System.out.println("backScanWithStack number is:" + tempBinaryTree.value);
+				lastVisitBinaryTree = tempBinaryTree;
+			}
+		}
+	}
 }
