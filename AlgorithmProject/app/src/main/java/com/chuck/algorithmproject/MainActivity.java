@@ -4,6 +4,7 @@ package com.chuck.algorithmproject;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.chuck.algorithmproject.algorithm.LastIndexKValue;
 import com.chuck.algorithmproject.algorithm.ReconstructBinaryTree;
 import com.chuck.algorithmproject.algorithm.RevertNode;
 import com.chuck.algorithmproject.binarytree.BinaryTree;
@@ -26,6 +27,7 @@ public class MainActivity extends Activity {
 //        RadixSort.radixSort();
 //        BinaryTree.start();
 //        RevertNode.test();
-        ReconstructBinaryTree.main(null);
+//        ReconstructBinaryTree.main(null);
+        new LastIndexKValue().main();
     }
 }
