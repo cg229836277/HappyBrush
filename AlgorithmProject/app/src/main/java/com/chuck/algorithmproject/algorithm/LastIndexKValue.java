@@ -33,7 +33,7 @@ public class LastIndexKValue {
             --k;
         }
         ListNode q = rootNode.next;
-        while(p != null){
+        while(p.next != null){
             p = p.next;
             q = q.next;
         }
