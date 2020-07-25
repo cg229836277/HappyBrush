@@ -1,9 +1,5 @@
 package com.chuck.algorithmproject.algorithm;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.concurrent.BlockingDeque;
-
 public class RevertNode1 {
 
     public static class ListNode {
