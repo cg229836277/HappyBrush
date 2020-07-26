@@ -1,7 +1,13 @@
 package com.chuck.algorithmproject.algorithm;
 
+import java.util.PriorityQueue;
+import java.util.Scanner;
+
 public class LongestSameStringSeries {
     public static String findLCS(String A, String B) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
         if (A == null || A.length() == 0 || B == null || B.length() == 0) {
             return null;
         }

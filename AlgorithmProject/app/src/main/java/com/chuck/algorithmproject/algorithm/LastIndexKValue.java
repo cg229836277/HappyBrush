@@ -29,11 +29,11 @@ public class LastIndexKValue {
         }
         ListNode p = rootNode.next;
         while(k > 1){
-            p = p.next;
+            p = p.next;//定位到从前往后的第k个位置
             --k;
         }
-        ListNode q = rootNode.next;
-        while(p.next != null){
+        ListNode q = rootNode.next;//节点在初始位置
+        while(p.next != null){//p遍历完成，在最后一个节点，对应的q在倒数第k个节点
             p = p.next;
             q = q.next;
         }
