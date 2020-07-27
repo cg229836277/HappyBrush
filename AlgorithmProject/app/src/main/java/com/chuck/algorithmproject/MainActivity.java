@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.chuck.algorithmproject.algorithm.FindNumberKNumberInArray;
+import com.chuck.algorithmproject.algorithm.LRSOperation;
 import com.chuck.algorithmproject.algorithm.LastIndexKValue;
 import com.chuck.algorithmproject.algorithm.LongestSameStringSeries;
 import com.chuck.algorithmproject.algorithm.ReconstructBinaryTree;
@@ -33,7 +34,8 @@ public class MainActivity extends Activity {
 //        new LastIndexKValue().main();
 //        String result = LongestSameStringSeries.findLCS("1AB2345CD","12345EF");
 //        FindNumberKNumberInArray.main("[0,0,0,0,2,0,1]");
-        FindNumberKNumberInArray.main("[3,2,1,5,6,4]");
-//        System.out.println("result is " + result);
+//        FindNumberKNumberInArray.main("[3,2,1,5,6,4]");
+        int number = LRSOperation.getLRSNumber("ababcdabcefsgg");
+        System.out.println("result int " + number);
     }
 }
