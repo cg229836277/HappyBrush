@@ -18,7 +18,7 @@ public class LRSOperation {
         List<String> list = new ArrayList<String>(treeSet);
 
         int index1 = 0,maxLength = 0;
-        while(index1 < size - 2){
+        while(index1 < size - 1){
             int commonSize = 0;
             String str1 = list.get(index1);
             String str2 = list.get(index1 + 1);
