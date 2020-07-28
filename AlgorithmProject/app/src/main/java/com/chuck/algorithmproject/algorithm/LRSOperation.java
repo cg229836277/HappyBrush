@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
+//leetcode 1044. 最长重复子串
 public class LRSOperation {
     public static int getLRSNumber(String input){
         if(input == null || input.length() == 0){
@@ -38,5 +39,35 @@ public class LRSOperation {
             ++index1;
         }
         return maxLength;
+    }
+
+    class Solution {
+        public int maxRepOpt1(String text) {
+            if(text == null || text.length() == 0){
+                return 0;
+            }
+            int size = text.length();
+            TreeSet<String> set = new TreeSet<String>();
+            for(int index= 0;index < size;index++){
+                set.add(text.substring(index));
+            }
+            ArrayList<String> list = new ArrayList<String>(set);
+            int max = 0;
+            for(int index1 = 0;index1 < size - 1;index1++){
+                String str1 = list.get(index1);
+                String str2 = list.get(index1 + 1);
+                int childSize = Math.min(str1.length(),str2.length());
+                int childIndex = 0,maxSize = 0;
+                for(;childIndex < childSize;childIndex++){
+                    if(str1.charAt(childIndex) == str2.charAt(childIndex)){
+                        ++maxSize;
+                        if(maxSize > max){
+                            max = maxSize;
+                        }
+                    }
+                }
+            }
+            return max;
+        }
     }
 }

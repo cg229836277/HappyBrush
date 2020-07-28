@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 //        String result = LongestSameStringSeries.findLCS("1AB2345CD","12345EF");
 //        FindNumberKNumberInArray.main("[0,0,0,0,2,0,1]");
 //        FindNumberKNumberInArray.main("[3,2,1,5,6,4]");
-        int number = LRSOperation.getLRSNumber("ababcdabcefsgg");
+        int number = LRSOperation.getLRSNumber("aaabaaa");
         System.out.println("result int " + number);
     }
 }
