@@ -70,4 +70,43 @@ public class LRSOperation {
             return max;
         }
     }
+
+    public class Solution1 {
+        public String longestDupSubstring(String S) {
+            if(S == null || S.length() == 0){
+                return "";
+            }
+            int size = S.length();
+            TreeSet<String> set = new TreeSet<String>();
+            for(int index= 0;index < size;index++){
+                set.add(S.substring(index));
+            }
+            ArrayList<String> list = new ArrayList<String>(set);
+            int max = 0,maxEndIndex = 0;
+            String maxStr = null;
+            for(int index1 = 0;index1 < size - 1;index1++){
+                String str1 = list.get(index1);
+                String str2 = list.get(index1 + 1);
+                int str1Size = str1.length();
+                int str2Size = str2.length();
+                String minStr = str1Size > str2Size ? str2:str1;
+                int childSize = Math.min(str1Size,str2Size);
+                int childIndex = 0,maxSize = 0;
+                for(;childIndex < childSize;childIndex++){
+                    if(str1.charAt(childIndex) == str2.charAt(childIndex)){
+                        ++maxSize;
+                        if(maxSize > max){
+                            maxStr = minStr;
+                            maxEndIndex = childIndex;
+                            max = maxSize;
+                        }
+                    }
+                }
+            }
+            if(maxStr == null || maxStr.length() == 0){
+                return "";
+            }
+            return maxStr.substring(maxEndIndex - max + 1,maxEndIndex + 1);
+        }
+    }
 }
