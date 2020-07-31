@@ -13,7 +13,6 @@ public class ShellInsertSort {
     public static void shellInsertSort() {
         int size = number.length;
         int delta = size;
-//        int initDelta = size / 2 + 1;
         while (true) {
             delta = delta / 2;
             for (int i = 0; i < delta; i++) {
