@@ -12,6 +12,8 @@ import com.chuck.algorithmproject.algorithm.LongestSameStringSeries;
 import com.chuck.algorithmproject.algorithm.ReconstructBinaryTree;
 import com.chuck.algorithmproject.algorithm.RevertNode;
 import com.chuck.algorithmproject.binarytree.BinaryTree;
+import com.chuck.algorithmproject.sort.CountSort;
+import com.chuck.algorithmproject.sort.HeapSort;
 import com.chuck.algorithmproject.sort.ShellInsertSort;
 
 public class MainActivity extends Activity {
@@ -23,14 +25,14 @@ public class MainActivity extends Activity {
 //        BubbleSort.bubbleSort();
 //        SelectionSort.selectionSort();
 //        InsertSort.insertSort();
-        ShellInsertSort.shellInsertSort();
+//        ShellInsertSort.shellInsertSort();
 //        MergeSort.mergeSort();
 //        QuickSort.quickSort();
 //        HeapSort.heapSort();
 //        CountSort.countSort();
 //        BucketSort.bucketSort();
 //        RadixSort.radixSort();
-//        BinaryTree.start();
+        BinaryTree.start();
 //        RevertNode.test();
 //        ReconstructBinaryTree.main(null);
 //        new LastIndexKValue().main();
